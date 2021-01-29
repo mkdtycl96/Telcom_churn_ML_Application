@@ -68,8 +68,8 @@ if st.sidebar.button("Predict"):
 
 #st.table(df1)
 
-st.success(model_rf.predict_proba(df1))
-X= df.drop(["Churn"],axis=1)
+#st.success(model_rf.predict_proba(df1))
+#X= df.drop(["Churn"],axis=1)
 
 #st.write(X)
 
