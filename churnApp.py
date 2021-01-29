@@ -12,7 +12,7 @@ model_xgb = pickle.load(open("xgb_model2","rb"))
 model_log = pickle.load(open("log_model2_telco","rb"))
 model_lgbm=pickle.load(open("lgbm_model_telco","rb"))
 model_knn=pickle.load(open("knn_model_telco","rb"))
-model_rf=pickle.load(open("rf_model","rb"))
+#model_rf=pickle.load(open("rf_model","rb"))
 
 html_temp = """
 <div style="background-color:tomato;padding:1.5px">
@@ -33,9 +33,9 @@ Contract=st.sidebar.selectbox("The contract term of the customer", ( "Month-to-M
 PhoneService=st.sidebar.selectbox("Whether the customer has Internet service or not", ('No', 'Yes'))
 InternetService=st.sidebar.selectbox("Customer’s internet service provider", ('DSL', 'Fiber optic', 'No'))
 
-if models == "Random Forest":
-    model = model_rf
-elif models == "XGBoost" :
+#if models == "Random Forest":
+    #model = model_rf
+if models == "XGBoost" :
     model = model_xgb
 elif models == "Logistic":
     model = model_log
